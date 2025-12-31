@@ -7,9 +7,9 @@ import streamlit as st
 
 # Load OpenAI API key
 load_dotenv()
-client = OpenAI(api_key=os.getenv("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"))
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-# --- File reading functions ---
+# File reading functions
 def read_stats(file):
     if file.name.endswith(".csv"):
         return read_csv(file)
